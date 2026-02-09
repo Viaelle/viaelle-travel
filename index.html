@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viaelle Travel</title>
+  <style>
+  :root{
+    --black:#0f0f0f;
+    --gold:#c7a55b;
+    --paper:#faf9f7;
+  }
+  body{
+    margin:0;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    background:var(--paper);
+    color:#1a1a1a;
+    line-height:1.7;
+  }
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:48px 20px;
+  }
+  header{
+    background:#ffffff;
+    border-bottom:1px solid #ececec;
+  }
+ ​You​
+header .wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:50px 20px 40px;
+}
+  .logo{
+    height:42px;
+  }
+  .btn{
+    background:var(--black);
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:999px;
+    font-size:13px;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    border:0;
+    cursor:pointer;
+  }
+  .btn.alt{
+    background:transparent;
+    color:var(--black);
+    border:1px solid var(--black);
+  }
+  .hero{
+    padding:90px 0 70px;
+  }
+  h1{
+    font-size:48px;
+    font-weight:500;
+    letter-spacing:-0.5px;
+    margin-bottom:22px;
+  }
+  h2{
+    font-size:26px;
+    font-weight:500;
+    margin-bottom:18px;
+  }
+  p{
+    font-size:18px;
+    color:#444;
+    max-width:720px;
+  }
+  .row{
+    display:flex;
+    gap:14px;
+    margin-top:26px;
+    flex-wrap:wrap;
+  }
+  .card{
+    background:#ffffff;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:34px;
+    margin:26px 0;
+  }
+  ul{
+    padding-left:18px;
+  }
+  li{
+    margin-bottom:12px;
+    font-size:17px;
+  }
+  footer{
+    text-align:center;
+    padding:60px 0 30px;
+    color:#777;
+    font-size:14px;
+  }
+  a{
+    color:var(--black);
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.15);
+  }
+  a:hover{
+    border-bottom-color:var(--gold);
+  }
+.center-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+.btn{
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  transform: translateY(-1px);
+}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+<div class="brand center-logo">
+  <img src="logo.png" alt="Viaelle Travel" class="logo">
+</div>
+    <a class="btn" href="#contact">Plan my trip</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+   <h1>Luxury travel, thoughtfully curated.</h1>
+<p>
+  Viaelle Travel is an independent travel agent specialising in Ibiza escapes,
+  luxury travel, and carefully curated UK staycations — all designed with style,
+  ease, and elevated experiences in mind.
+</p>
+  <div class="row">
+  <a class="btn" href="https://wa.me/447787060008" target="_blank">WhatsApp to book</a>
+  <a class="btn alt" href="#services">See services</a>
+</div>
+  </section>
+  <section id="services" class="card">
+    <h2>Services</h2>
+    <p>Pick the support you want — Viaelle makes travel easy.</p>
+    <ul>
+   <li><b>Full-service travel planning:</b> complete end-to-end planning, bookings, and logistics</li>
+<li><b>Bespoke itineraries:</b> thoughtfully designed trips tailored to your style and pace</li>
+<li><b>Concierge support:</b> personal assistance before and during your travels</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Popular destinations</h2>
+ <p>Ibiza • Europe • Worldwide luxury travel • UK staycations</p>
+  </section>
+<p>
+  <b>Email:</b> <a href="mailto:Viaelle@outlook.com">Viaelle@outlook.com</a><br>
+  <b>Phone / WhatsApp:</b> <a href="tel:07787060008">07787 060008</a><br>
+  <b>Instagram:</b> <a href="https://instagram.com/viaelletravel" target="_blank">@viaelletravel</a>
+</p>
+  </section>
+  <footer>
+    © <span id="y"></span> Viaelle Travel
+  </footer>
+</main>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+  document.getElementById("f").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("msg").textContent =
+      "Thanks! This form is ready, but it doesn’t send emails yet. Tell me what email you want to receive messages on and I’ll connect it.";
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>
